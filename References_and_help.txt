@@ -1,0 +1,32 @@
+1) I used the python documentation and stack overflow for documentation related to enabling CLI based interfaces for python programs. 
+
+These are the links I used for this: 
+
+https://docs.python.org/3/library/argparse.html
+https://stackoverflow.com/questions/20063/whats-the-best-way-to-parse-command-line-arguments
+
+2) I had this weird error while trying to import the requests module. I had to use the command import pip._vendor.requests as requests to solve the error. 
+
+A kind stack overflow user helped me out with this: 
+https://stackoverflow.com/a/69374234
+
+3) I used a lot of trello.com references related to interaction with their api. 
+
+These are all the references I used: 
+
+https://developer.atlassian.com/cloud/trello/guides/power-ups/your-first-power-up/
+
+https://developer.atlassian.com/cloud/trello/rest/api-group-actions/#api-group-actions
+
+https://developer.atlassian.com/cloud/trello/rest/api-group-boards/#api-boards-id-get
+
+https://developer.atlassian.com/cloud/trello/rest/api-group-cards/#api-cards-post
+
+https://developer.atlassian.com/cloud/trello/rest/api-group-cards/#api-cards-id-actions-comments-post
+
+4) I used this website for help with syntax reagrding the requests and response for post methods. 
+
+https://realpython.com/python-requests/
+
+
+

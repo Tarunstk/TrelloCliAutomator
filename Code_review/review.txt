@@ -1,0 +1,94 @@
+Code review
+
+
+Initial Steps: 
+
+1) To start off, the I first went through the main repositories, main branch jenkins-job-linter:dlevel to understand the codebase. After spending about an hour or so I got a jist about the feature. 
+
+2) I then went through the jenkins-job-linter:feature/linter-short-codes-pr-test to understand the changes and the comments made to it. 
+
+Observations/Initial comments: 
+
+1) The code changes maintain the coding standards of the project. The codebase is a linter project which involves a set of scripts that likely track job configurations and maintain formatting. 
+
+2) The feature branch has incorporated some additional code in python to add support for short codes. 
+
+
+Deeper review of PR changes and commits: 
+
+Commit id:  b2d9b81c1eb88f058c79cbf0c8737c229e2d2938 (May 1, 2018)
+
+In this commit, the author has updated 12 integration test files under the integration_tests folder. All of them are yaml configuration files for tests. In this the author has updated the short codes for various test cases and their expected failures. TO summaries this commit, the following short codes were added: 
+
+L003 - Short code for errors related to variable injection and improper parameter setting of the variable that are to be injected. 
+
+L006 - Short code for errors in relation to if the shell builder is empty or if there is content in one or more shell scripts. 
+
+L004 - Short code for errors related to improper referencing of object needed for the missing-job trigger. 
+
+L007 - Short code for errors related to improper formatting of the shebhang sequence. 
+
+L001 - Short code for errors relating to improper timestamps. 
+
+L002 - Short code for workspace cleanup errors or failures. 
+
+L005 - Short code for improper column configuration.
+
+This commit was made on May 1st, 2018 but not pushed on the same day. There were no merge conflicts for this commit.  
+
+
+
+Commit id: fcf213479df5a0cc2e08848f1a3cbe64b457df2e (May 1, 2018)
+
+Linter short codes were updated in this commit to the documentation file linters.rst file. 
+
+Documentation updates regarding the Jenkins job builder was included in the running.rst file.
+
+This was commited on May 1, 2018 but not pushed. No merge conflicts. 
+
+
+
+Commit id: b6a6141343002f24e03b70b5c6cefc4787480401 (Aug 19, 2020)
+
+This commit has made changes to 2 files, namely jenkins_job_linter/__init__.p and the jenkins_job_linter/linters.py. 
+
+Changes in the __init__.py: 
+
+1) In line 45 and 46 the piece of code has been updated to include the linter.description to the format function. 
+
+2) Line 86 to Line 97: Two click option modules have been added which seem  to be a click based CLI application/frontend. 
+
+The first click option is added to select linters based on their short code. 
+The second click option is added to ignore linters based on their short code. 
+
+3) Line 99 to 101: the main function has been updated to include the select and option click option flags. 
+
+4) Line 106 to 125: This piece of code has been added to add conditional statements for the select and ignore flags. 
+
+The select conditional has an only_run array that loops through the selected linter short codes and adds them to the only_run array. 
+
+The ignore conditional similarly has an disable_linters array that loops though the ignore short codes and adds them to the disable_linters array. 
+
+5) Line 129 to 140: A new command is added to the click based CLI application called list-linters. 
+
+def list_linters is a new function that will basically list all the linters. 
+
+The for loop loops through the linters and then the print statements print the short code for linters and their description. 
+
+There is an option for default configuration of linter. 
+
+Changes in linters.py: 
+
+1) Short Codes are added for each linting pattern in their respective classes. 
+
+2) Lines 308 and 309 has the variable LINTER_SHORT_CODES where all the Linter short codes are accumulated. 
+
+This commit was made on Aug 19th 2020 and was pushed along with the previous 2 commits. 
+
+
+Conclusion: 
+
+In this Pull request, short codes were introduced for various linting patterns and failure outputs. The related code was updated to support the short code format. There are no merge conflicts. The tests can be ignored or selected based on their short codes when linting. 
+
+In total there were 107 lines added and 32 lines deleted across 12 files in this pull request. 
+
