@@ -8,7 +8,8 @@ This **Python** application leverages the command line interface (CLI) to intera
 - *python >= 3.x*
 - *You will need the "requests" library installed to process json based requests to the trello.com api*
 - *The requests library has been installed in this proram using* **pip3 install requests**. *It has been imported using* **import pip._vendor.requests as requests**.
-
+- You will need to generate a user_key and user_token to successfully interact with the Trello.com api. 
+- Once generated please use those and pass them as arguments to the CLI commands. 
 
 
 ### Important terminology you need while using this application: 
