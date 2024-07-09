@@ -101,6 +101,20 @@ Required fields:
 
 **NOTE:** Enclose the required fields in "". 
 
+## Future Developments
+
+1) Add function to fetch all cards from a list. 
+
+2) Add function to create new boards
+
+3) Add function to delete cards and move cards from one list to another
+
+4) Add function to delete comments from cards
+
+5) Package the whole project in a Docker container for easier distribution. 
+
+6) Set up credential authenticator for more collaborators
+
 ## Resources 
 
 **Documentation for trello.com api**
